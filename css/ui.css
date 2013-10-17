@@ -1,0 +1,107 @@
+/*=====================================================
+
+   Navigation (with dropdowns)
+   	
+ ======================================================*/
+
+ .navbar {
+ 	position: relative;
+ 	left:90px;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	display: table;
+ 	width: 905px;
+ 	border: 1px solid #
+
+ }
+ .navbar .logo{
+ 	max-height:40px;
+ 	width: 220px;
+}
+
+ .navbar a.toggle{
+ 	display: none;
+ }
+ .navbar ul{
+ 	display: table;
+ 	float: none;
+ 	vertical-align: middle;
+ 	margin-bottom: 0;
+ }
+ .navbar ul li{
+ 	display: table-cell;
+ 	float: none;
+ 	width:100px;
+ 	list-style-type: none;
+ 	margin-bottom: 0;
+ 	margin-left: 0;
+ 	text-align: center;
+ 	border-right: 1px solid #3793f7; 
+
+ }
+ .navbar>ul>li>a{
+ 	display: block;
+ 	height:50px;
+ 	line-height: 50px;
+ 	font-size: 16px;
+ 	padding: 0 15px;
+ 	white-space: nowrap;
+ 	color:#fff;
+ 	text-shadow:0 1px 2px #bdcde9, 0 1px 0 #bdcde9;
+ 	font-weight: bold;
+
+ }
+ .navbar>ul>li:hover>a{
+ 	background: #232359;
+ 	z-index: 1000;
+ }
+ 
+ .navbar>ul>li>li>a{
+ 	padding: 0 33px;
+ }
+
+ /******************Blue Navbar Styles*****************/
+ 
+	.blue.navbar {
+		border-radius: 4px;
+		
+		background: -moz-linear-gradient(top, #5dbb73 0%, #2d9047 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5dbb73), color-stop(100%,#2d9047)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #5dbb73 0%,#2d9047 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #5dbb73 0%,#2d9047 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #5dbb73 0%,#2d9047 100%); /* IE10+ */
+		background: linear-gradient(top, #5dbb73 0%,#2d9047 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dbb73', endColorstr='#2d9047',GradientType=0 ); /* IE6-9 */
+		
+		-webkit-box-shadow: inset 0 1px 1px #94dda6,
+			0 1px 2px rgba(0,0,0,0.61) !important; /* Remove this line if you dont want a dropshadow on your navigation*/
+		box-shadow: inset 0 1px 1px #94dda6,
+					0 1px 2px rgba(0,0,0,0.61) !important; /* Remove this line if you dont want a dropshadow on your navigation*/
+	}
+	
+	.blue.navbar li {
+		-webkit-box-shadow:
+			inset 1px 0 0 #94dda6;
+		box-shadow:
+			inset 1px 0 0 #94dda6;
+	}
+	
+	.blue.navbar ul:first-child li:first-child a {
+		border-radius: 4px 0 0 4px;
+	}
+	
+	.blue.navbar ul li:last-child a {
+		border-radius: 0 4px 4px 0;
+	}
+	
+	.blue.navbar > ul > li:hover > a {
+		-webkit-box-shadow:	2px 0 0 #172017;
+		box-shadow: 2px 0 0 #172017;
+		text-decoration: none;
+
+	}
+	
+	.blue.navbar > ul > li:first-child, .blue.navbar > ul > li:first-child a:hover {	
+		box-shadow: none;
+	}
+	

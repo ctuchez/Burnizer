@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/BurnImage.js"></script>
+</head>
+
+<body>
+
+
+
+<center><canvas id="imageCanvas"></canvas>
+<br />
+<canvas id="colorPalette"></canvas>
+<div id="isBurn"></div>
+<br />
+</center>
+<form action="testUploadSelect.php" method="post" enctype="multipart/form-data" >
+<label for="file">Filename:</label>
+<input type="file" accept="image/*;capture=camera" name="imageLoader" id="imageLoader"><br>
+
+
+
+
+<table>
+    <tr><td><label> Length of Calibration Stick:</label></td><td> <input type="text" name="length"></input></td></tr>
+    <tr><td><label> Start coordinate    </label></td><td> <input type="text" name="calX0" id="calX0" > </input><input type="text" name="calY0" id="calY0" > </input></td></tr>
+    <tr><td><label> End Coordinate      </label></td><td> <input type="text" name="calX1" id="calX1" > </input><input type="text" name="calY1" id="calY1" > </input></td></tr>
+    <tr><td><label> Normal Skin         </label></td><td> <input type="text" name="skinX0" id="skinX0" > </input><input type="text" name="skinY0" id="skinY0" > </input></td></tr>
+    <tr><td><label> First Degree Burn   </label></td><td> <input type="text" name="skinX1" id="skinX1" > </input><input type="text" name="skinY1" id="skinY1" > </input></td><td><input name="check1" id="check1" type="checkbox"></td></tr>
+    <tr><td><label> Second Degree Burn  </label></td><td> <input type="text" name="skinX2" id="skinX2" > </input><input type="text" name="skinY2" id="skinY2" > </input></td><td><input name="check2" id="check2" type="checkbox"></td></tr>
+    <tr><td><label> Third Degree Burn   </label></td><td> <input type="text" name="skinX3" id="skinX3" > </input><input type="text" name="skinY3" id="skinY3" > </input></td><td><input name="check3" id="check3" type="checkbox"></td></tr>
+</table>
+
+<input type="submit" name="submit" value="Submit">
+</form>
+<script src="js/checkBurn.js"></script>
+</body>
+</html>

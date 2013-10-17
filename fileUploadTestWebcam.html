@@ -1,0 +1,31 @@
+<video autoplay id="vid" style="display:block;"></video>
+<canvas id="canvas" width="640" height="480" style="border:1px solid #d3d3d3;"></canvas><br>
+<button onclick="snapshot()">Take Picture</button>
+
+<script type="text/javascript">
+
+    var video = document.querySelector("#vid");
+    var canvas = document.querySelector('#canvas');
+    var ctx = canvas.getContext('2d');
+    var localMediaStream = null;
+
+    var onCameraFail = function (e) {
+        console.log('Camera did not work.', e);
+    };
+
+    function snapshot() {
+        if (localMediaStream) {
+            document.querySelector("#vid").style.display = "none";
+            ctx.drawImage(video, 0, 0);
+            ctx.toDataURL("image/png");
+        }
+    }
+
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    window.URL = window.URL || window.webkitURL;
+    navigator.getUserMedia({video:true}, function (stream) {
+        video.src = window.URL.createObjectURL(stream);
+        localMediaStream = stream;
+    }, onCameraFail);
+
+</script>

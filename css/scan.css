@@ -1,0 +1,17 @@
+#container2
+{
+    padding-bottom: 200px
+}
+.configuration input
+{
+    width:100px
+}
+.configuration td
+{
+    padding-right: 10px;
+}
+#instructions
+{
+    width: 500px;
+    height: 160px;
+}

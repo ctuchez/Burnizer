@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name ="viewport" content="width=device-width, initial-scale =1.0">
+  <title>Scan</title>
+  <link href="css/scan.css" rel = "stylesheet">
+  <link href="css/bootstrap.min.css" rel = "stylesheet">
+  <link href="css/bootstrap-fileupload.css" rel="stylesheet" type="text/css" >
+  <link href="css/justified-nav.css" rel="stylesheet"> 
+  <script>
+  function switchDisplay()
+  {
+    $("#container1").show();
+    $("#container2").hide();
+  }
+  function openBurns()
+  {
+    
+    $('#OptionTitle').slideUp();
+  }
+  </script>
+</head>
+
+<body>
+<div class="container">
+    <div class="masthead">
+      <img src="img/facebooklogo.jpg" height="40" align="right">
+      <img src="img/twitterlogo.jpg" height="40" align="right">
+      <img src="img/rsslogo.png" height="40" align="right">
+      <h1> Burnize </h1> 
+      <ul class="nav nav-justified">
+       <li><a href="index.html">Home</a></li>
+       <li class="active"><a href="scan.html">Scan</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="#">Contact</a></li>
+     </ul>
+   </div>
+ </div>
+
+ <form action="scan.php" method="post" enctype="multipart/form-data" >
+<div class="container-fluid" style="display: none" id="container1">
+  <div class= "jumbotron">
+    <center><h1>Configuration</h1></center>
+    <center>
+    <table class ="configuration">
+    <tr><td>
+    
+        <table>
+        <tr><th>Configuration Variable</th><th>X Position</th><th>Y Position</th><th>Disabled?</th></tr>
+        <tr><td><label> Length of Calibration Stick:</label></td><td> <input type="text" name="length" value="1"></input></td></tr>
+        <tr><td><label> Calibration Stick Pos1    </label></td><td> <input type="text" name="calX0" id="calX0" > </input></td><td><input type="text" name="calY0" id="calY0" > </input></td></tr>
+        <tr><td><label> Calibration Stick Pos2      </label></td><td> <input type="text" name="calX1" id="calX1" > </input></td><td><input type="text" name="calY1" id="calY1" > </input></td></tr>
+        <tr><td><label> Normal Skin         </label></td><td> <input type="text" name="skinX0" id="skinX0" > </input></td><td><input type="text" name="skinY0" id="skinY0" > </input></td></tr>
+        <tr><td><label> First Degree Burn   </label></td><td> <input type="text" name="skinX1" id="skinX1" > </input></td><td><input type="text" name="skinY1" id="skinY1" > </input></td><td><input name="check1" id="check1" type="checkbox"></td></tr>
+        <tr><td><label> Second Degree Burn  </label></td><td> <input type="text" name="skinX2" id="skinX2" > </input></td><td><input type="text" name="skinY2" id="skinY2" > </input></td><td><input name="check2" id="check2" type="checkbox"></td></tr>
+        <tr><td><label> Third Degree Burn   </label></td><td> <input type="text" name="skinX3" id="skinX3" > </input></td><td><input type="text" name="skinY3" id="skinY3" > </input></td><td><input name="check3" id="check3" type="checkbox"></td></tr>
+        </table>
+    </td>
+    <td>
+        <table>
+            <tr>
+            <td>
+            <div style="padding-bottom: 20px" id="instructions"> Please enter the length of the calibration stick in cm. </br> Then click both ends of the stick in the picture. </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <canvas id="imageCanvas" ></canvas>
+            </td>
+            </tr>
+        </table>
+    </center>
+    </td>
+    </tr>
+    </table>
+    <input type="submit"></input>
+  </br>
+  
+</div>
+</div>
+
+
+<div class="container-fluid"  id="container2" >
+  <div class= "jumbotron">
+    <div id="OptionTitle">
+        <center><h1 >Options</h1></center>
+        <br />
+    </div>
+    
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">  
+      <div class="accordion-heading">  
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" onclick="openBurns();">  
+         <h2>Burns</h2>
+       </a>  
+     </div>  
+     <div id="collapseOne" class="accordion-body collapse">  
+      <div class="accordion-inner"> 
+      <center>
+       
+       
+       
+       <input type="file" accept="image/*;capture=camera" name="imageLoader" id="imageLoader">
+      
+       
+       
+     
+        <br />
+        
+        
+      </div>  
+    </div>   
+   
+</div>
+</div>
+ </form>
+ <div class="modal fade" id="contact" role = "dialog">
+    <div class= "modal-dialog">
+    </div>
+  </div>
+
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">Site build by MHacks---Team-Dorito</p>
+      <a href ="#" class="navbar-button btn-info btn pull-right">Join us!</a>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-fileupload.js"></script>
+  <script src="js/bootstrap-collapse.js"></script>
+  <script src="js/scan.js"></script>
+
+</body>
+</html>
